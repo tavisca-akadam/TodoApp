@@ -21,22 +21,32 @@
         <div class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a class="active" href="#">Profile</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a class="active" href="#">Login</a></li>
             </ul>
         </div>
 
         <div class="todo-body">
             <div>
-                <div class="img-align">
-                    <img src="img/minion.jpg" height="150px" width="150px" />
-                </div>
-                <div class="profile-content">
-                    <p>
-                        <h3>Name: Minion</h3>
-                        <h3>Email: minion@goove.com </h3>
-                        <h3>Address: USA</h3>
-                    </p>
+                <h3>Login</h3>
+
+                <div class="login-form-cls">
+                    <form action="/action_page.php">
+                    <label for="fname">Userame</label>
+                    <input type="text" id="username" name="username" placeholder="Your username..">
+                
+                    <label for="lname">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Your password..">
+                
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                    </select>
+                    
+                    <input type="submit" value="Submit">
+                    </form>
                 </div>
             </div>
         </div>
