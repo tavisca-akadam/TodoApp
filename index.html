@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./css/style.css" rel="stylesheet" />
+    <script src="./js/script.js" ></script>
+    <script src="./js/task.js" ></script>
+    <script src="./js/login.js" ></script>
+    <title>TODO</title>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            
+            document.getElementById('login').style.display = 'none';
+            document.getElementById('profile').style.display = 'none';
+        }    
+    </script>
+    <div class="container">
+        <div class="header">
+            <div>
+                <img src="./img/todo-logo.png" height="80px" width="80px">
+            </div>
+            <div>
+                <h1 style="padding-left: 10px;">TODO</h1>
+            </div>
+        </div>
+
+        <div class="navbar">
+            <ul>
+                <li><a id="nav-home" class="active" href="#home" onclick="changeTab('home')">Home</a></li>
+                <li><a id="nav-profile" href="#profile" onclick="changeTab('profile')">Profile</a></li>
+                <li><a id="nav-login" href="#login" onclick="changeTab('login')">Login</a></li>
+            </ul>
+        </div>
+
+        <div id="home" class="todo-body">
+            <div>
+                <h2>Task : 
+                    <input type="text" id="title" placeholder="add task here..." onkeyup="search()">
+                    <button class="add-btn" onclick="addTask()">+</button>
+                </h2>
+            </div>
+            <div>
+                <table id="task-list">
+                    
+                </table>
+            </div>
+        </div>
+
+
+        <div id="login" class="todo-body">
+            <div>
+                <h3>Login</h3>
+
+                <div class="login-form-cls">
+                    <form id="login-form" action="">
+                    <label for="fname">Userame</label>
+                    <input type="text" id="username" name="username" placeholder="Your username..">
+                
+                    <label for="lname">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Your password..">
+                
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                        <option value="india">India</option>
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                    </select>
+                    
+                    <input type="submit" value="Submit" onclick="login()">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="profile" class="todo-body">
+            <div>
+                <div class="img-align">
+                    <img src="img/minion.jpg" height="150px" width="150px" />
+                </div>
+                <div class="profile-content">
+                    <p>
+                        <h3>Name: Minion</h3>
+                        <h3>Email: minion@goove.com </h3>
+                        <h3>Address: USA</h3>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div>
+                <a href="#" >Home</a> &nbsp;|&nbsp;
+                <a href="#" >About Us</a>&nbsp;|&nbsp;
+                <a href="#" >Contact Us</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
