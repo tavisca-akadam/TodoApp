@@ -21,7 +21,7 @@ function addTask() {
         else if(i == 1){
             var update_btn = document.createElement('button');
             var t = document.createTextNode("Edit");
-            
+            update_btn.setAttribute('onclick','edit(this)');
             update_btn.appendChild(t);
             td.appendChild(update_btn);
         }
@@ -62,3 +62,14 @@ function search()
     }
   }
 }
+
+function edit(task) {
+    var row = task.parentNode.parentNode;
+    var text = row.getElementsByTagName('td')[0];
+    console.log(text);
+    var updatedText = prompt("Enter Task here", text.innerText);
+    if (updatedText != null) {
+      text.innerHTML =
+      "<p>" + updatedText + "</p>";
+    }
+  }
