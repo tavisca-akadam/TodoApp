@@ -15,6 +15,11 @@
     bottom: 0;
     width: 100%;
 }
+.add-btn {
+  background: #555;
+  height: 25px;
+  color: #FFFFFF;
+}
 .navbar
 ul {
     list-style-type: none;
