@@ -40,10 +40,25 @@ function addTask() {
 
 function removeTask(oButton) {
     var empTab = document.getElementById('task-list');
-    empTab.deleteRow(oButton.parentNode.parentNode.rowIndex);       // BUTTON -> TD -> TR.
+    empTab.deleteRow(oButton.parentNode.parentNode.rowIndex);
 }
 
 function search()
 {
-    
+    var table = document.getElementById('task-list');
+    var tr = table.getElementsByTagName('tr');
+    var str = document.getElementById('title').value.toUpperCase();
+
+    for(var i=0; i<tr.length; i++)
+  {
+    var td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      var txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(str) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
 }
